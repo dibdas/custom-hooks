@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import DataFetching from "./components/DataFetching";
 import MyComponent from "./components/MyComponent";
+import Online from "./components/Online";
+import UseInterval from "./components/UseInterval";
+import UseMouse from "./components/UseMouse";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +19,10 @@ function App() {
   return (
     <>
       {render ? <MyComponent /> : <></>}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      <Online />
+      <UseMouse />
+      <UseInterval />
     </>
   );
 }
