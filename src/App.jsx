@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DataFetching from "./components/DataFetching";
 import MyComponent from "./components/MyComponent";
 import Online from "./components/Online";
+import SearchBar from "./components/SearchBar";
 import UseInterval from "./components/UseInterval";
 import UseMouse from "./components/UseMouse";
 
@@ -23,6 +24,7 @@ function App() {
       <Online />
       <UseMouse />
       <UseInterval />
+      <SearchBar />
     </>
   );
 }

@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 function useInterval(fn, timeout) {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    const interval = setInterval(() => {
+    let interval = setInterval(() => {
       fn();
     }, timeout);
     return () => {
       clearInterval(interval);
     };
-  }, [timeout]);
+  }, [fn, timeout]);
 
   return count;
 }
