@@ -7,7 +7,9 @@ function useDebounce(value, timer) {
     let timeout = setInterval(() => {
       setDeboundedvalue(value);
     }, timer);
+
     return () => {
+      // claer time out also happens again and again
       clearInterval(timeout);
     };
   }, [value]);
